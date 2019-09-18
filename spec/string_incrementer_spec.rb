@@ -9,16 +9,20 @@ describe "string Incrementer" do
         expect(incrementer("string")).to eq("string1")
     end
 
-    it "adds 2 to string1" do
+    it "string1 -> string2" do
         expect(incrementer("string1")).to eq("string2")
     end
 
-    it "adds 3 to string12" do
+    it "string12 -> string13" do
         expect(incrementer("string12")).to eq("string13")
     end
 
 
-    it "adds 3 to foo0042" do
+    it "foo0042 +=1 " do
         expect(incrementer("foo0042")).to eq("foo0043")
+    end
+
+    it "foo9 --> foo10" do
+        expect(incrementer("foo9")).to eq("foo10")
     end
 end
