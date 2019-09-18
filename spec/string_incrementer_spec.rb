@@ -37,5 +37,15 @@ describe "string Incrementer" do
     it "fo-o1 --> fo-o2" do
         expect(incrementer("fo-o1")).to eq("fo-o2")
     end
+
+    it "fo-o1 --> fo-o2" do
+        expect(incrementer("fo-o01")).to eq("fo-o02")
+    end
+
+    xit "f1oo1 --> f1oo2" do
+        expect(incrementer("f1oo1")).to eq("f1oo2")
+    end
+
+
 end
 

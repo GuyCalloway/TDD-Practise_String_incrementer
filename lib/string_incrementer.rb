@@ -1,6 +1,6 @@
-def incrementer(string)
+def incrementer(input)
   
-    sep_nums = string.split("")
+    sep_nums = input.split("")
     number_array = []
     j = 0
 
@@ -13,12 +13,12 @@ def incrementer(string)
 
     number = number_array.join.to_i
 
-    if j == 0 
-        return string + "1"
+    if j == 0 && input[-1].to_i == 0
+        return input + "1"
     else
-      sep_nums[0...j].join + "#{number + 1}"
+      return sep_nums[0...j].join + "#{number + 1}"
     end
-    
+
 end
 
 
