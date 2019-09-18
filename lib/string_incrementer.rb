@@ -2,26 +2,40 @@ def incrementer(input)
   
     sep_nums = input.split("")
     number_array = []
-    j = 0
-
-    sep_nums.each_with_index { |x, i| if x.to_i != 0
-                                   number_array += sep_nums[i..-1]
-                                   j = i
-                                   break
-                                 end
-    }
-
-    number = number_array.join.to_i
-
-    if j == 0 && input[-1].to_i == 0
+    
+    i = index(sep_nums.reverse)
+    nums = sep_nums[i..-1]
+    x = number_i(nums)
+   
+    if input[-1].to_i == 0
         return input + "1"
     else
-      return sep_nums[0...j].join + "#{number + 1}"
+      number_array += sep_nums[i+x..-1]
+      number = number_array.join.to_i
+      return sep_nums[0...i+x].join + "#{number + 1}"
     end
-
 end
 
 
+def index(arr)
+    j = 0
+    arr.each_with_index { |x, i| if /\A\d+\z/ === x
+                                 else
+                                   j = i
+                                   break
+                                 end
+                        }
+     index = arr.length - j
+end
 
 
-#reverse
+def number_i(arr)
+    n = 0
+    arr.each_with_index {|x, i| if x.to_i != 0 
+                                  n = i
+                                  return n
+                                  break
+                                end
+                         }  
+                                
+end
