@@ -46,6 +46,8 @@ describe "string Incrementer" do
         expect(incrementer("f1oo1")).to eq("f1oo2")
     end
 
-
+    it "foobar00 --> foobar01" do
+        expect(incrementer("foobar00")).to eq("foobar01")
+    end
 end
 

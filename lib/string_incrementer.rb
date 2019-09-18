@@ -7,7 +7,9 @@ def incrementer(input)
     nums = sep_nums[i..-1]
     x = number_i(nums)
    
-    if input[-1].to_i == 0
+    if input[-1] == "0"
+        return input.chop + "1"
+    elsif input[-1].to_i == 0
         return input + "1"
     else
       number_array += sep_nums[i+x..-1]
@@ -36,6 +38,5 @@ def number_i(arr)
                                   return n
                                   break
                                 end
-                         }  
-                                
+                         }                             
 end
