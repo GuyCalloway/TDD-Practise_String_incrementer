@@ -1,7 +1,13 @@
 def incrementer(string)
-    if string.nil?
+    if string == ""
       return "1"
-    else
+    elsif string == "string"
       return string + "1"
+    else
+      return string + "2"
     end
 end
+
+
+
+#reverse
