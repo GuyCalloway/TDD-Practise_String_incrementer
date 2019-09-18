@@ -1,19 +1,24 @@
 def incrementer(string)
-    arr1 = []
-    arr = string.split("")
-    x = 1
+  
+    sep_nums = string.split("")
+    number_array = []
+    j = 0
+
+    sep_nums.each_with_index { |x, i| if x.to_i != 0
+                                   number_array += sep_nums[i..-1]
+                                   j = i
+                                   break
+                                 end
+    }
+
+    number = number_array.join.to_i
+
+    if j == 0 
+        return string + "1"
+    else
+      sep_nums[0...j].join + "#{number + 1}"
+    end
     
-    until (x.to_i == 0 || x == "0")
-        x = arr.pop
-        arr1 << x
-    end
-   
-    num =  arr1[0].to_i + 1
-    if num != 1
-     string.chop + "#{num}"
-    else 
-     string + "#{num}"
-    end
 end
 
 

@@ -25,4 +25,8 @@ describe "string Incrementer" do
     it "foo9 --> foo10" do
         expect(incrementer("foo9")).to eq("foo10")
     end
+
+    it "foo19 --> foo20" do
+        expect(incrementer("foo19")).to eq("foo20")
+    end
 end
