@@ -10,10 +10,15 @@ describe "string Incrementer" do
     end
 
     it "adds 2 to string1" do
-        expect(incrementer("string1")).to eq("string12")
+        expect(incrementer("string1")).to eq("string2")
     end
 
     it "adds 3 to string12" do
-        expect(incrementer("string12")).to eq("string123")
+        expect(incrementer("string12")).to eq("string13")
+    end
+
+
+    it "adds 3 to foo0042" do
+        expect(incrementer("foo0042")).to eq("foo0043")
     end
 end
