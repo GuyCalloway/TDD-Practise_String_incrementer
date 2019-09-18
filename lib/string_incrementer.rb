@@ -11,10 +11,16 @@ def incrementer(input)
         return input.chop + "1"
     elsif input[-1].to_i == 0
         return input + "1"
+    
     else
       number_array += sep_nums[i+x..-1]
       number = number_array.join.to_i
-      return sep_nums[0...i+x].join + "#{number + 1}"
+      
+      if number_array_check(number_array, nums)
+        sep_nums[0...i+x-1].join + "#{number + 1}"
+      else
+        return sep_nums[0...i+x].join + "#{number + 1}"
+      end
     end
 end
 
@@ -29,6 +35,17 @@ def index(arr)
                         }
      index = arr.length - j
 end
+
+def number_array_check(arr, y)
+   (all_equal?(arr) && arr.include?("9")) && (arr.length != y.length)
+end
+
+
+def all_equal?(arr)
+  arr.uniq.size <= 1
+end 
+
+
 
 
 def number_i(arr)

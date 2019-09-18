@@ -34,8 +34,8 @@ describe "string Incrementer" do
         expect(incrementer("foo0199")).to eq("foo0200")
     end
 
-    it "fo-o1 --> fo-o2" do
-        expect(incrementer("fo-o1")).to eq("fo-o2")
+    it "fo-o10 --> fo-o12" do
+        expect(incrementer("fo-o10")).to eq("fo-o11")
     end
 
     it "fo-o01 --> fo-o02" do
@@ -49,5 +49,8 @@ describe "string Incrementer" do
     it "foobar00 --> foobar01" do
         expect(incrementer("foobar00")).to eq("foobar01")
     end
+   it "foobar01000" do
+    expect(incrementer("foobar009")).to eq("foobar010")
+   end
 end
 
