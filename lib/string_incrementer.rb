@@ -1,12 +1,15 @@
 def incrementer(string)
-    if string == ""
-      return "1"
-    elsif string == "string"
-      return string + "1"
-    else
-      return string + "2"
+    arr1 = []
+    arr = string.split("")
+    x = 1
+    until x.to_i == 0 || x == "0"
+        x = arr.pop
+        arr1 << x
     end
+    num =  arr1[0].to_i + 1    
+    string + "#{num}"
 end
+
 
 
 

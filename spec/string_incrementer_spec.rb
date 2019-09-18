@@ -12,4 +12,8 @@ describe "string Incrementer" do
     it "adds 2 to string1" do
         expect(incrementer("string1")).to eq("string12")
     end
+
+    it "adds 3 to string12" do
+        expect(incrementer("string12")).to eq("string123")
+    end
 end
